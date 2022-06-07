@@ -49,7 +49,6 @@ exports.createUser = (req, res, next) => {
     database
         .query(insertQuery)
         .then(result => {
-            console.log(result)
             res.status(201).json({
                 message: "Success",
                 data: req.body
