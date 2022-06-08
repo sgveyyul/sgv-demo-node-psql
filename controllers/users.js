@@ -43,6 +43,7 @@ exports.getUser = (req, res, next) => {
 
 exports.createUser = (req, res, next) => {
     const user = req.body;
+    
     let insertQuery = `insert into public."user"(firstname, lastname, middlename, birthday, address) 
                        values('${user.firstname}', '${user.lastname}', '${user.middlename}', '${user.birthday}', '${user.address}')`
 
